@@ -114,6 +114,9 @@ class Store {
       ui.addBookToList(book);
     });
   }
+  static clearLocalStorage() {
+    localStorage.removeItem("books");
+  }
 }
 document.addEventListener("DOMContentLoaded", Store.loadBooksFromLocalStorage);
 document.getElementById("book-form").addEventListener("submit", function (e) {
@@ -154,4 +157,18 @@ document.getElementById("searchBy").addEventListener("change", function () {
       "placeholder",
       `Search Book By it's ${document.getElementById("searchBy").value}...`
     );
+});
+document.getElementById("clear").addEventListener("click", function (e) {
+  const isSure = confirm(
+    "Are You Sure To Remove All The Books From Local Storage..."
+  );
+  if (isSure) {
+    Store.clearLocalStorage();
+    const ui = new UI();
+    ui.showAlert(
+      "All Books Are Removed From Your Browsers Local Storage...",
+      "success"
+    );
+    document.getElementById("book-list").innerHTML = "";
+  }
 });

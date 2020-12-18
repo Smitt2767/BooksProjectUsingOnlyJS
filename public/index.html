@@ -46,10 +46,13 @@
                 <input type="text" id="author" class="form-control mb-3 bg-transparent text-light">
                 <label for="isbn" class="text-info lead">Book ISBN Number</label>
                 <input type="text" id="isbn" class="form-control mb-3 bg-transparent text-light">
-                <button type="submit" class="btn btn-outline-info px-5 my-2">Add Book</button>
-
             </div>
         </form>
+        <div class="d-flex">
+            <button type="submit" form="book-form" class="btn btn-outline-info px-5 my-2 me-3">Add Book</button>
+            <button class="btn btn-outline-warning px-3 my-2" id="clear">Clear All Books From Storage</button>
+        </div>
+        
         <hr class="text-muted">
         <div class="div d-flex justify-content-between align-items-start">
             <input type="text" id="search-book" class="form-control mb-4 bg-transparent text-light me-md-5 me-2" placeholder="Search Book By it's name...">
