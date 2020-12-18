@@ -14,7 +14,7 @@ class UI {
       <td class="name">${book.name}</td>
       <td class="author">${book.author}</td>
       <td class="isbn">${book.isbn}</td>
-      <td><a href="#" class="delete text-decoration-none fw-bold text-danger">X</a></td>
+      <td class="text-sm-start text-center"><a href="#" class="delete text-decoration-none fw-bold text-danger">X</a></td>
       `;
     bookList.appendChild(tr);
   }
