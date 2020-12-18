@@ -143,7 +143,7 @@ document.getElementById("book-list").addEventListener("click", function (e) {
   e.preventDefault();
 });
 document.getElementById("search-book").addEventListener("keyup", function (e) {
-  const book = this.value;
+  const book = this.value.toLowerCase();
   const ui = new UI();
   ui.filterBooks(book);
 });
