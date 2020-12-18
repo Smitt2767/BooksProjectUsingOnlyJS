@@ -1,0 +1,22 @@
+{
+  "name": "booksprojectusingjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smitt2767/BooksProjectUsingOnlyJS.git"
+  },
+  "author": "smit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smitt2767/BooksProjectUsingOnlyJS/issues"
+  },
+  "homepage": "https://github.com/Smitt2767/BooksProjectUsingOnlyJS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
