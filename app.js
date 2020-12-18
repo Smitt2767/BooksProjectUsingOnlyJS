@@ -53,10 +53,12 @@ class UI {
     }
   }
 
-  filterBooks(bookname) {
-    const books = document.querySelectorAll(".name");
+  filterBooks(searchFor) {
+    const books = document.querySelectorAll(
+      `.${document.getElementById("searchBy").value}`
+    );
     books.forEach(function (book) {
-      if (book.outerText.toLowerCase().search(bookname) === -1) {
+      if (book.outerText.toLowerCase().search(searchFor) === -1) {
         book.parentElement.classList.add("hidden");
       } else {
         book.parentElement.classList.remove("hidden");
@@ -144,4 +146,12 @@ document.getElementById("search-book").addEventListener("keyup", function (e) {
   const book = this.value;
   const ui = new UI();
   ui.filterBooks(book);
+});
+document.getElementById("searchBy").addEventListener("change", function () {
+  document
+    .getElementById("search-book")
+    .setAttribute(
+      "placeholder",
+      `Search Book By it's ${document.getElementById("searchBy").value}...`
+    );
 });

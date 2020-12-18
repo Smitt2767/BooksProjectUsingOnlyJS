@@ -51,9 +51,15 @@
             </div>
         </form>
         <hr class="text-muted">
-        <div class="div">
-            <input type="text" id="search-book" class="form-control mb-4 bg-transparent text-light w-75 mx-auto" placeholder="Search Book By It's Name...">
-            
+        <div class="div d-flex justify-content-between align-items-start">
+            <input type="text" id="search-book" class="form-control mb-4 bg-transparent text-light me-5" placeholder="Search Book By it's name...">
+            <select class="form-control bg-transparent text-muted w-25" id="searchBy">
+                <option value="name" disabled selected>Search By</option>
+                <option value="name">Name</option>
+                <option value="author">Author</option>
+                <option value="isbn">ISBN</option>
+            </select>
+              
         </div>
         <table class="table table-hover table-responsive table-dark">
             <thead class="text-info ">
