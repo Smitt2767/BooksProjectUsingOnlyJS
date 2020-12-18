@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>BooksProjectUsingJS</title>
+    <style>
+        body {
+            min-height : 100vh;
+            width : 100%;
+            background: url('https://ak.picdn.net/shutterstock/videos/11373440/thumb/1.jpg') no-repeat center center/cover;
+        }
+        .bg-dark {
+            opacity: 0.7;
+        }
+        .table-dark {
+            opacity: 0.8;
+        }
+        .hidden {
+            display: none;
+        }
+        .alert {
+            animation-name: example;
+            animation-duration: 3s ;
+        }
+        @keyframes example {
+        0% { opacity: 0}
+        50%{opacity: 1;}
+        100% {opacity: 0}
+        }
+        ::placeholder { 
+        color: #ccc !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container  py-5 ">
+        <h1 class="display-4 text-center text-primary font-monospace ">Books List</h1>
+        <form action="" id="book-form">
+            <div class="form-group">
+                <label for="name" class="text-info lead">Book Name</label>
+                <input type="text" id="bookname" class="form-control mb-3 bg-transparent  text-light">
+                <label for="author" class="text-info lead">Book Author</label>
+                <input type="text" id="author" class="form-control mb-3 bg-transparent text-light">
+                <label for="isbn" class="text-info lead">Book ISBN Number</label>
+                <input type="text" id="isbn" class="form-control mb-3 bg-transparent text-light">
+                <button type="submit" class="btn btn-outline-info px-5 my-2">Add Book</button>
+
+            </div>
+        </form>
+        <hr class="text-muted">
+        <div class="div">
+            <input type="text" id="search-book" class="form-control mb-4 bg-transparent text-light w-75 mx-auto" placeholder="Search Book By It's Name...">
+            
+        </div>
+        <table class="table table-hover table-responsive table-dark">
+            <thead class="text-info ">
+                <tr>
+                    <th></th>
+                    <th scope="col">Bookname</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">ISBN</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="book-list" class="text-light lead">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="./app.js"></script>
+</html>
