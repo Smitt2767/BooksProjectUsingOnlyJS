@@ -46,7 +46,7 @@ class UI {
   removeBookFromList(target) {
     if (target.classList[0] === "delete") {
       target.parentElement.parentElement.remove();
-
+      ui.showAlert("Book Removed...", "success");
       Store.removeBookFromLocalStorage(
         target.parentElement.previousElementSibling.textContent
       );
@@ -142,7 +142,7 @@ document.getElementById("book-form").addEventListener("submit", function (e) {
 document.getElementById("book-list").addEventListener("click", function (e) {
   const ui = new UI();
   ui.removeBookFromList(e.target);
-  ui.showAlert("Book Removed...", "success");
+
   e.preventDefault();
 });
 document.getElementById("search-book").addEventListener("keyup", function (e) {
