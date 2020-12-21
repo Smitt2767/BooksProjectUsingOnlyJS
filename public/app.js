@@ -46,7 +46,7 @@ class UI {
   removeBookFromList(target) {
     if (target.classList[0] === "delete") {
       target.parentElement.parentElement.remove();
-      ui.showAlert("Book Removed...", "success");
+      this.showAlert("Book Removed...", "success");
       Store.removeBookFromLocalStorage(
         target.parentElement.previousElementSibling.textContent
       );
